@@ -1,2 +1,7 @@
 *.o
 *.txt
+*.d
+*.out
+*.dia
+bool
+*.xccheckout
