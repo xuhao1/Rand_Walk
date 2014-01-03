@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		69D359C21876F22800AE9F55 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69D359C11876F22800AE9F55 /* main.cpp */; };
 		69D359C41876F22800AE9F55 /* Rand_Walk.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69D359C31876F22800AE9F55 /* Rand_Walk.1 */; };
+		69D359CE1876FD9300AE9F55 /* namibang.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69D359CC1876FD9300AE9F55 /* namibang.cpp */; };
+		69D359D11876FE4F00AE9F55 /* vector2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69D359CF1876FE4F00AE9F55 /* vector2f.cpp */; };
+		69D359D4187702B900AE9F55 /* Metropolis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69D359D2187702B900AE9F55 /* Metropolis.cpp */; };
+		69D359D61877430600AE9F55 /* bool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69D359D51877430600AE9F55 /* bool.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +30,15 @@
 
 /* Begin PBXFileReference section */
 		69D359BE1876F22800AE9F55 /* Rand_Walk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Rand_Walk; sourceTree = BUILT_PRODUCTS_DIR; };
-		69D359C11876F22800AE9F55 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		69D359C11876F22800AE9F55 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = main.cpp; sourceTree = "<group>"; };
 		69D359C31876F22800AE9F55 /* Rand_Walk.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Rand_Walk.1; sourceTree = "<group>"; };
+		69D359CC1876FD9300AE9F55 /* namibang.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = namibang.cpp; sourceTree = "<group>"; };
+		69D359CD1876FD9300AE9F55 /* namibang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = namibang.h; sourceTree = "<group>"; };
+		69D359CF1876FE4F00AE9F55 /* vector2f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector2f.cpp; sourceTree = "<group>"; };
+		69D359D01876FE4F00AE9F55 /* vector2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector2f.h; sourceTree = "<group>"; };
+		69D359D2187702B900AE9F55 /* Metropolis.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Metropolis.cpp; sourceTree = "<group>"; };
+		69D359D3187702B900AE9F55 /* Metropolis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metropolis.h; sourceTree = "<group>"; };
+		69D359D51877430600AE9F55 /* bool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bool.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,13 @@
 		69D359B51876F22800AE9F55 = {
 			isa = PBXGroup;
 			children = (
+				69D359D51877430600AE9F55 /* bool.cpp */,
+				69D359D2187702B900AE9F55 /* Metropolis.cpp */,
+				69D359D3187702B900AE9F55 /* Metropolis.h */,
+				69D359CF1876FE4F00AE9F55 /* vector2f.cpp */,
+				69D359D01876FE4F00AE9F55 /* vector2f.h */,
+				69D359CC1876FD9300AE9F55 /* namibang.cpp */,
+				69D359CD1876FD9300AE9F55 /* namibang.h */,
 				69D359C01876F22800AE9F55 /* Rand_Walk */,
 				69D359BF1876F22800AE9F55 /* Products */,
 			);
@@ -117,6 +135,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D359D11876FE4F00AE9F55 /* vector2f.cpp in Sources */,
+				69D359D4187702B900AE9F55 /* Metropolis.cpp in Sources */,
+				69D359CE1876FD9300AE9F55 /* namibang.cpp in Sources */,
+				69D359D61877430600AE9F55 /* bool.cpp in Sources */,
 				69D359C21876F22800AE9F55 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

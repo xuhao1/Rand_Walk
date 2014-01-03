@@ -1,0 +1,398 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{xeCJK}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding JIS
+\fontencoding global
+\font_roman 华文仿宋
+\font_sans 华文细黑
+\font_typewriter 华文仿宋
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+十三题
+\end_layout
+
+\begin_layout Standard
+PB12203141
+\end_layout
+
+\begin_layout Standard
+徐浩
+\end_layout
+
+\begin_layout Section
+题目：
+\end_layout
+
+\begin_layout Standard
+Metropolis 重要抽样法抽取多粒子体系
+\end_layout
+
+\begin_layout Section
+算法分析
+\end_layout
+
+\begin_layout Standard
+题中H与广义坐标x,y关系为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H=\frac{x^{2}}{2\sigma_{X}^{2}}+\frac{y^{2}}{2\sigma_{y}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据麦克斯韦分布
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(x)=e^{-\beta H(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用Metropolis 做随机解，则我们下一步生成为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x1=x0+Sin(\theta)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y1=y0+Cos(\theta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+操作中，我们取
+\begin_inset Formula 
+\[
+\sigma_{x}=1,\sigma_{y}=1
+\]
+
+\end_inset
+
+为系数，取STEP=10，从(100，100)点开始模拟，预热1000步。
+\end_layout
+
+\begin_layout Standard
+则可以简单得到序列与随机行走图
+\end_layout
+
+\begin_layout Section
+结果分析
+\end_layout
+
+\begin_layout Standard
+那么可以得到一些不错的结果，首先是Markov链点的二维分布
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/xuhao/Develop/T13/markov链点二维分布.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+是一个均匀的图形，于是3D分布统计之
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/xuhao/Develop/T13/markov三维分布.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也是在三维分布成正态分布，我们以
+\begin_inset Formula $x-\rho$
+\end_inset
+
+作图则有，红线为正态分布理论值
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/xuhao/Develop/T13/A-rho.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+以及y-rho作图，红线为正态分布理论值
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /Users/xuhao/Develop/T13/b-rho.jpg
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+都是漂亮的正态分布图形
+\end_layout
+
+\begin_layout Standard
+下面计算系综，如同data.out，我们有很多很多数据，分别统计可以得到
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+系综实测值
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+系综理论值
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<
+\begin_inset Formula $x^{2}$
+\end_inset
+
+>
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+485.419
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<
+\begin_inset Formula $y^{2}$
+\end_inset
+
+>
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+494.55
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+<
+\begin_inset Formula $x^{2}+y^{2}$
+\end_inset
+
+>
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+979.969
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中理论值由公式
+\begin_inset Formula 
+\[
+<X>=\frac{\int_{-\infty}^{+\infty}X\cdot P(x)dx}{\int_{-\infty}^{+\infty}P(x)dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+给出。
+\end_layout
+
+\begin_layout Section
+小结
+\end_layout
+
+\begin_layout Standard
+Metropolis可以对概率分布进行抽样，特别是知道玻尔兹曼因子也就是概率能量关系的时候对广义坐标抽样。应用很广。
+\end_layout
+
+\end_body
+\end_document
