@@ -22,7 +22,7 @@ long getCurrentTime()
 	gettimeofday(&tv,NULL);
 	return tv.tv_sec * 1000000 + tv.tv_usec;
 }
-#define maxloop 10000000000
+#define maxloop 100000000000
 void collision(vector2f & vel,double&omega,double theta)
 {
     double alpha=randf();
@@ -44,7 +44,7 @@ int work()
     long st=getCurrentTime();
     long ed=0;
     double proc=0,lasttime=0;
-    for (long i=0; i<maxloop; i++)
+    for (long long i=0; i<maxloop; i++)
     {
         
         theta+=omega*dt;
